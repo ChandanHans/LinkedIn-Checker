@@ -1,0 +1,38 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn Checker",
+    "version": "1.0",
+    "description": "It helps you verify if a LinkedIn profile matches your specified criteria using OpenAI's GPT API. Press Ctrl+I to open the popup.",
+    "permissions": ["storage", "activeTab", "scripting"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+      "16": "images/icon.png",
+      "48": "images/icon.png",
+      "128": "images/icon.png"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.linkedin.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "commands": {
+      "_execute_action": {
+        "suggested_key": {
+          "default": "Ctrl+I"
+        },
+        "description": "Press Ctrl+I to open the LinkedIn Checker popup."
+      }
+    }
+  }
+  

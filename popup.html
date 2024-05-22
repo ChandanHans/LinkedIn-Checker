@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LinkedIn Checker</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>LinkedIn Checker</h1>
+    <p>This extension verifies if a LinkedIn profile matches your specified criteria using the OpenAI API.</p>
+    <div class="input-container">
+      <label for="apiKey">GPT API Key:</label>
+      <input type="text" id="apiKey" placeholder="Enter GPT API Key">
+    </div>
+    <div class="input-container">
+      <label for="criteria">Criteria:</label>
+      <textarea id="criteria" placeholder="Enter Criteria"></textarea>
+    </div>
+    <button id="checkButton">Check</button>
+    <div id="result"></div>
+    <div id="loadingAnimation" style="display: none;">
+      <img src="images/loading.svg" alt="Loading">
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
